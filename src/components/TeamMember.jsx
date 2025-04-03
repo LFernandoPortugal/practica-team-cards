@@ -12,7 +12,8 @@ const TeamMember = ({ name, role, image }) => {
         alt={name} 
         className="w-full h-auto object-cover"
       />
-      <span className="absolute top-0 right-0 bg-white px-2 py-1 text-xs font-bold uppercase">
+      <span className="writing-mode-vertical-lr absolute top-0 right-0 bg-white px-2 py-1 text-xs font-bold uppercase"
+      style={{ writingMode: 'vertical-lr', transform: 'rotate(360deg)' }}>
         {role}
       </span>
       <h3 className="text-xl font-bold mt-2">{name}</h3>
