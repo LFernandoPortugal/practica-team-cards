@@ -6,17 +6,20 @@
  */
 const TeamMember = ({ name, role, image }) => {
   return (
-    <div className="relative group">
-      <img 
-        src={image} 
-        alt={name} 
-        className="w-full h-auto object-cover"
-      />
-      <span className="writing-mode-vertical-lr absolute top-0 right-0 bg-white px-2 py-1 text-xs font-bold uppercase"
-      style={{ writingMode: 'vertical-lr', transform: 'rotate(360deg)' }}>
+    <div className="flex items-start gap-0">
+      <div className="flex-1">
+        <img src={image} alt={name} className="w-full h-auto object-cover" />
+        <h3 className="text-xl font-bold mt-2">{name}</h3>
+      </div>
+
+      <span
+        className="text-xs font-bold uppercase whitespace-nowrap"
+        style={{
+          writingMode: "vertical-lr",
+        }}
+      >
         {role}
       </span>
-      <h3 className="text-xl font-bold mt-2">{name}</h3>
     </div>
   );
 };

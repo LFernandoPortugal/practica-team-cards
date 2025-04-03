@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div className="min-h-screen bg-white p-4 md:p-8">
       <div className="max-w-6xl mx-auto">
-        {/* Header Section */}
+        {/* Header */}
         <div className="flex flex-col md:flex-row justify-between mb-8 md:mb-12">
           <div className="mb-6 md:mb-0">
             <h1 className="text-3xl md:text-4xl font-bold mb-4">
@@ -25,7 +25,7 @@ const App = () => {
         {/* Team Members Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
           {teamMembers.map((member) => (
-            <div key={member.id} className="[&:nth-child(2n+1)]:sm:-mt-12 [&:nth-child(3n+2)]:lg:mt-20">
+            <div key={member.id} className="[&:nth-child(2n+1)]:-mt-12 [&:nth-child(3n+2)]:lg:mt-20">
               <TeamMember {...member} />
             </div>
           ))}
